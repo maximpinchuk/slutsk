@@ -1,0 +1,17 @@
+.news-section {
+	margin: 80px 0;
+	@include grid-breakpoint(sm) {
+		margin: 80px 0;
+	}
+	&__title {
+		margin: 0 0 -30px 0;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: 0.875rem;
+		color: $accent-color;
+		line-height: (20/14);
+		@include grid-breakpoint(sm) {
+			margin: 0 0 30px 0;
+		}
+	}
+}

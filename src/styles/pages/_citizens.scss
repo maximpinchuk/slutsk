@@ -1,0 +1,53 @@
+.reception-info {
+	display: none;
+	@include grid-breakpoint(md) {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 90px;
+	}
+	.reception-info__contact-info {
+		@include grid-breakpoint(md) {
+			.contact-info__title {
+				display: inline;
+				margin: 0;
+				font-family: 'Graphik', sans-serif;
+				font-weight: 700;
+				font-size: 0.875rem;
+				color: $accent-color;
+				line-height: (28/14);
+				letter-spacing: 0.075em;
+				text-transform: uppercase;
+			}
+			.contact-info__text {
+				display: inline;
+				margin: 0 0 0 15px;
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 400;
+				font-size: 0.875rem;
+				color: $text-primary;
+				line-height: (28/14);
+				&[href] {
+					&:hover {
+						color: $accent-color;
+					}
+				}
+			}
+		}
+	}
+	.reception-info__schedule {
+		@include grid-breakpoint(md) {
+			.schedule__text {
+				margin: 0;
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 400;
+				font-size: 0.875rem;
+				color: $text-primary;
+				line-height: (28/14);
+				text-align: right;
+				strong {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}

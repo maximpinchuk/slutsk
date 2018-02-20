@@ -1,0 +1,119 @@
+/*
+ * Utils
+ */
+@import 'utils/variables';
+
+
+
+/*
+ * Layout
+ */
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+
+
+
+/*
+* Base
+*/
+@import 'base/normalize';
+@import 'base/typography';
+@import 'base/modernzr';
+@import 'base/helpers';
+
+
+
+/*
+ * Pages
+ */
+@import 'pages/home';            // 1. Главная
+@import 'pages/about';           // 2. О предприятии
+@import 'pages/sertificates';    // 3. Сертификаты
+@import 'pages/products';        // 4. Продукция
+@import 'pages/history';         // 5. История
+@import 'pages/firm-style';      // 6. Фирменный стиль
+@import 'pages/direction';       // 7. Руководство
+@import 'pages/citizens';        // 8. Работа с гражданами
+@import 'pages/excursions';      // 9. Экскурсии
+@import 'pages/product-page';    // 10. Страница с продуктом
+@import 'pages/tenders';         // 11. Тендеры
+@import 'pages/stockholders';    // 12. Акционерам
+@import 'pages/news';            // 13. Новости
+@import 'pages/news-post';       // 14. Страница с новостью
+@import 'pages/contacts';        // 15. Контакты
+@import 'pages/sitemap';         // 16. Карта сайта
+@import 'pages/search-results';  // 17. Результаты поиска
+@import 'pages/conf-policy';     // 18. Политика конфиденциальности
+@import 'pages/404';             // 19. Ошибка 404
+
+
+
+/*
+ * Components
+ */
+@import 'components/adaptive-navigation';
+@import 'components/preloader.scss';
+@import 'components/section';
+@import 'components/block';
+@import 'components/banner';
+@import 'components/navigation--hidden';
+@import 'components/navigation-contacts';
+@import 'components/buttons';
+@import 'components/round-link';
+@import 'components/animations';
+@import 'components/news-preview';
+@import 'components/text';
+@import 'components/breadcrumbs';
+@import 'components/lang-switch';
+@import 'components/map';
+@import 'components/images';
+@import 'components/documents-list';
+@import 'components/table';
+@import 'components/contactus';
+@import 'components/form';
+@import 'components/scroll-down';
+@import 'components/employee-cards';
+@import 'components/cards';
+@import 'components/image-zoom';
+@import 'components/page-pagination';
+
+
+
+/*
+ * Vendors
+ */
+@import 'vendors/pace';
+@import 'vendors/swiper';
+@import 'vendors/halka-box';
+
+
+
+/*
+ * Vendors-extensions
+ */
+@import 'vendors-extensions/swiper';
+
+
+
+body {
+    height: 100%;
+	background-color: $body-bg;
+	&.no-scroll {
+		overflow: hidden;
+	}
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+    width: 5px;
+    @include grid-breakpoint(sm) {
+    	width: 10px;
+    }
+}
+::-webkit-scrollbar-track-piece {
+    background: $scrollbar-track-piece;
+}
+::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb;
+}

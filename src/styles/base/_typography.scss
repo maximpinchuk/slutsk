@@ -1,0 +1,21 @@
+// GraphikLCG Bold
+@font-face {
+	font-family: 'Graphik';
+	src: url('../fonts/GraphikLCG-bold.eot'),
+		url('../fonts/GraphikLCG-bold.woff2'),
+		url('../fonts/GraphikLCG-bold.woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: fallback;
+}
+
+// GraphikLCG SemiBold
+@font-face {
+	font-family: 'Graphik';
+	src: url('../fonts/GraphikLCG-semibold.eot'),
+		url('../fonts/GraphikLCG-semibold.woff2'),
+		url('../fonts/GraphikLCG-semibold.woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: fallback;
+}

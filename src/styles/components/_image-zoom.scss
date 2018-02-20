@@ -1,0 +1,46 @@
+.image-zoom {
+	position: relative;
+	box-shadow: 2.5px 4.3px 15.4px 0.6px rgba(0, 0, 0, 0.1);
+	@include grid-breakpoint(md) {
+		transition: box-shadow 0.3s;
+		cursor: pointer;
+		&:hover {
+			box-shadow: 5px 8.7px 15.4px 0.6px rgba(0, 0, 0, 0.2);
+			&:after {
+				opacity: 0.6;
+			}
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #060e2c;
+		opacity: 0;
+		@include grid-breakpoint(md) {
+			transition: opacity 0.3s;
+		}
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		width: 26px;
+		height: 26px;
+		margin: -13px 0 0 -13px;
+		background-image: url('../img/icons/zoom.svg');
+		background-position: 26px 26px;
+		opacity: 0;
+		@include grid-breakpoint(md) {
+			transition: opacity 0.3s;
+		}
+	}
+}

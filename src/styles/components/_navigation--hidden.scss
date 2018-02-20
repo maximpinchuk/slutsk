@@ -1,0 +1,129 @@
+.navigation-hidden {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 16;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	background: #0c0c0c;
+	transform-origin: right;
+	transform: scaleX(0);
+	transition: transform 0.6s 0.6s;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 16;
+		width: 100%;
+		height: 100%;
+		background-color: $accent-color;
+		transition: width 0.6s;
+	}
+	&.opened {
+		transform-origin: right;
+		transform: scaleX(1);
+		transition: transform 0.6s;
+		&:before {
+			width: 0;
+			transition: width 0.6s;
+			transition-delay: 0.6s;
+		}
+		.navigation-hidden__close {
+			.close__icon {
+				.icon__line {
+					&:before {
+						transform: scaleX(1);
+						transition: transform 0.3s 1s;
+					}
+					&:nth-child(1) {
+						transform: rotate(45deg);
+						transition: transform 0.3s 1.4s;
+					}
+					&:nth-child(2) {
+						transform: rotate(-45deg);
+						transition: transform 0.3s 1.4s;
+					}
+				}
+			}
+		}
+	}
+
+	.navigation-hidden__close {
+		position: absolute;
+		top: 64px;
+		right: 72px;
+		z-index: 0;
+		display: block;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		@include grid-breakpoint(md) {
+			&:hover {
+				.close__icon {
+					.icon__line {
+						&:before {
+							background-color: #fbfbfb;
+						}
+					}
+				}
+			}
+		}
+		.close__icon {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			.icon__line {
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				transform: rotate(0);
+				transition: transform 0.2s;
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: #fff;
+					transform: scaleX(0);
+					transition: transform 0.2s 0.2s, background-color 0.3s;
+				}
+			}
+		}
+	}
+
+	.content {
+		display: flex;
+		width: 90%;
+		margin: auto;
+		.col {
+			display: inline-block;
+			width: 50%;
+			.link {
+				display: block;
+				margin: 20px 0;
+				font-family: 'Graphik', sans-serif;
+				font-weight: 700;
+				font-size: 2.625rem;
+				color: #fff;
+				line-height: (60/42);
+				letter-spacing: 0.075em;
+				text-transform: uppercase;
+				text-align: right;
+				@include grid-breakpoint(md) {
+					transition: color 0.3s;
+					&:hover {
+						color: $accent-color;
+					}
+				}
+			}
+		}
+	}
+}

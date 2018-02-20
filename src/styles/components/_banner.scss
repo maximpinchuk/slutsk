@@ -1,0 +1,75 @@
+.banner {
+	position: relative;
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 3;
+			width: 100%;
+			height: 100%;
+			background-color: #060e2c;
+			opacity: 0.6;
+		}
+	}
+	.banner__container {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		padding: 0 15px;
+		@include grid-breakpoint(sm) {
+			padding: 0 5%;
+		}
+		.banner__title {
+			margin: 0;
+			font-family: 'Graphik', sans-serif;
+			font-weight: 700;
+			font-size: 2rem;
+			color: $text-secondary;
+			line-height: (46/32);
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			@include grid-breakpoint(sm) {
+				font-size: 2.875rem;
+				line-height: (60/46);
+				letter-spacing: 0.075em;
+			}
+		}
+	}
+}
+
+.banner__scroll-block {
+	position: absolute;
+	bottom: 60px;
+	left: 15px;
+	z-index: 5;
+	@include grid-breakpoint(md) {
+		display: none;
+	}
+	&.mainpage {
+		display: none;
+		@include grid-breakpoint(md) {
+			display: block;
+			right: 4%;
+			left: auto;
+		}
+	}
+	.scroll-block__text {
+		margin: 0 20px 0 0;
+		font-family: 'Graphik', sans-serif;
+		font-weight: 600;
+		font-size: 0.75rem;
+		color: #fff;
+		letter-spacing: 0.075em;
+		text-transform: uppercase;
+	}
+}

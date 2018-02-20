@@ -1,0 +1,265 @@
+table {
+	width: 100%;
+}
+
+.table {
+	width: 100%;
+	margin: 50px 0 80px 0;
+	border: 2px solid #f5f5f5;
+	border-radius: 3px;
+	border-spacing: 0;
+	.table__table-header {
+		.table-header__row {
+			
+		}
+		.table-header__cell {
+			padding: 30px 0 20px 40px;
+			text-align: left;
+			font-family: 'Graphik', sans-serif;
+			font-weight: 600;
+			font-size: 0.6875rem;
+			color: #a4a4a4;
+			line-height: (26/11);
+			text-transform: uppercase;
+			@include grid-breakpoint(sm) {
+				padding: 30px 0 20px 90px;
+			}
+			&:nth-child(1) {
+				padding-left: 30px;
+				@include grid-breakpoint(sm) {
+					padding-left: 90px;
+				}
+			}
+			&:last-child {
+				padding-right: 30px;
+				@include grid-breakpoint(sm) {
+					padding-right: 90px;
+				}
+			}
+			&.align--right {
+				text-align: right;
+			}
+			&.align--center {
+				text-align: center;
+			}
+			&.align--left {
+				text-align: left;
+			}
+		}
+	}
+	.table__table-body {
+		.table-body__row {
+			background-color: #fff;
+			&:nth-child(2n+1) {
+				background-color: #fcfcfc;
+			}
+		}
+		.table-body__cell {
+			padding: 20px 0;
+			font-family: 'Open Sans', sans-serif;
+			&:nth-child(1) {
+				padding-left: 50px;
+				@include grid-breakpoint(sm) {
+					padding-left: 90px;
+				}
+			}
+			&.label {
+				vertical-align: top;
+				font-weight: 700;
+				font-size: 0.9375rem;
+				color: #4c4c4c;
+				&.label--regular {
+					font-weight: 400;
+				}
+			}
+			&.value {
+				padding-left: 40px;
+				@include grid-breakpoint(sm) {
+					padding-left: 90px;
+				}
+			}
+			.cell__text {
+				margin: 0;
+				font-size: 0.8125rem;
+				color: #4c4c4c;
+				@include grid-breakpoint(sm) {
+					font-size: 0.9375rem;
+					line-height: (26/15);
+				}
+				&--bold {
+					// margin: 5px 0 0 0;
+					font-weight: 700;
+				}
+				&.align--right {
+					text-align: right;
+				}
+				&.align--center {
+					text-align: center;
+				}
+				&.align--left {
+					text-align: left;
+				}
+			}
+		}
+	}
+	&.documents {
+		.table__table-body {
+			.table-body__cell {
+				&:nth-child(1) {
+					width: 10%;
+					padding-left: 20px;
+					@include grid-breakpoint(sm) {
+						padding-left: 90px;
+					}
+				}
+				&:nth-child(2) {
+					width: 75%;
+					padding-top: 15px;
+					padding-right: 20px;
+					padding-left: 20px;
+				}
+				&:last-child {
+					padding-top: 15px;
+					padding-right: 20px;
+					@include grid-breakpoint(sm) {
+						padding-right: 90px;
+					}
+				}
+				.link {
+					font-family: 'Open Sans', sans-serif;
+					font-weight: 700;
+					font-size: 0.8125rem;
+					color: $accent-color;
+					line-height: (20/13);
+					@include grid-breakpoint(sm) {
+						font-size: 0.9375rem;
+						line-height: (26/15);
+					}
+				}
+			}
+		}
+	}
+	&.stockholders {
+		.table__table-header {
+			.table-header__cell {
+				&:nth-child(1) {
+					width: 50%;
+					padding-left: 30px;
+					@include grid-breakpoint(sm) {
+						padding-left: 90px;
+					}
+				}
+				&:nth-child(2) {
+					width: 30%;
+					padding-left: 0;
+				}
+				&:last-child {
+					width: 20%;
+					padding-right: 30px;
+					padding-left: 0;
+					@include grid-breakpoint(sm) {
+						padding-right: 90px;
+						padding-left: 0;
+					}
+				}
+				&.label {
+					&.label--regular {
+						font-weight: 400; 
+					}
+				}
+			}
+		}
+		.table__table-body {
+			overflow-x: auto;
+			.table-body__cell {
+				&--title {
+					padding: 20px 0;
+				}
+				padding: 5px 0;
+				&:nth-child(1) {
+					width: 50%;
+					padding-left: 30px;
+					@include grid-breakpoint(sm) {
+						padding-left: 90px;
+					}
+				}
+				&:nth-child(2) {
+					width: 30%;
+					padding-left: 0;
+				}
+				&:last-child {
+					width: 20%;
+					padding-right: 30px;
+					padding-left: 0;
+					@include grid-breakpoint(sm) {
+						padding-right: 90px;
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+	&.partners {
+		display: none;
+		@include grid-breakpoint(md) {
+			display: table;
+		}
+		.table__table-header {
+			.table-header__cell {
+				text-align: center;
+				&.row-1 {
+					padding: 30px 0 5px 0px;
+					@include grid-breakpoint(sm) {
+						padding: 30px 40px 5px 0px;
+					}
+					&:nth-child(1) {
+						padding-left: 30px;
+						@include grid-breakpoint(sm) {
+							padding-left: 50px;
+						}
+					}
+				}
+				&.row-2 {
+					padding: 5px 0 20px 0px;
+					@include grid-breakpoint(sm) {
+						padding: 5px 40px 20px 0px;
+					}
+				}
+			}
+		}
+		.table__table-body {
+			overflow-x: auto;
+			.table-body__cell {
+				width: 12.5%;
+				&:nth-child(1) {
+					padding-left: 50px;
+					@include grid-breakpoint(sm) {
+						padding-left: 50px;
+						padding-right: 40px;
+					}
+				}
+				&.value {
+					padding-right: 0px;
+					@include grid-breakpoint(sm) {
+						padding-left: 0;
+						padding-right: 40px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*
+ * Text align helpers
+ */
+.align--right {
+	text-align: right;
+}
+.align--center {
+	text-align: center;
+}
+.align--left {
+	text-align: left;
+}

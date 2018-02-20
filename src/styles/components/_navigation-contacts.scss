@@ -1,0 +1,62 @@
+.navigation__contacts {	
+	.contacts__title {
+		@include grid-breakpoint(md) {
+			margin: 40px 0 50px 0;
+			font-family: 'Graphik', sans-serif;
+			font-weight: 700;
+			font-size: 1.25rem;
+			font-style: normal;
+			color: #fff;
+			letter-spacing: 0.075em;
+			text-transform: uppercase;
+		}
+	}
+	.contacts__item {
+		position: relative;
+		margin: 20px 0;
+		.item__icon {
+			position: absolute;
+			top: 4px;
+			left: 0;
+			width: 18px;
+			height: 18px;
+			@include grid-breakpoint(md) {
+				top: 2px;
+			}
+		}
+		&.address {
+			margin-bottom: 25px;
+			@include grid-breakpoint(md) {
+				margin-bottom: 35px;
+			}
+		}
+		&.tel {
+			margin: 15px 0;
+		}
+		&.email {
+			margin-top: 25px;
+		}
+		.item__text,
+		.item__link {
+			padding: 0 0 0 40px;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 0.875rem;
+			line-height: 2;
+			font-style: normal;
+			color: #bebebe;
+			@include grid-breakpoint(md) {
+				font-size: 1rem;
+				line-height: 1.33
+			}
+		}
+		.item__link {
+			@include grid-breakpoint(md) {
+				transition: color 0.3s;
+				&:hover {
+					color: $accent-color;
+				}
+			}
+		}
+	}
+}

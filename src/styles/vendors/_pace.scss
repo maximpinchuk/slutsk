@@ -1,0 +1,452 @@
+/* This is a compiled file, you should be editing the file in the templates directory */
+// .pace {
+// 	pointer-events: none;
+// 	user-select: none;
+// 	box-sizing: border-box;
+// 	background-clip: padding-box;
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	z-index: 2000;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	width: 80%;
+// 	height: 100%;
+// 	margin: auto;
+// 	overflow: hidden;
+// 	@include grid-breakpoint(md) {
+// 		width: 60%;
+// 	}
+// }
+//
+// .pace {
+// 	.pace-progress {
+// 		box-sizing: border-box;
+// 		background-clip: padding-box;
+// 		position: absolute;
+// 		right: 100%;
+// 		display: block;
+// 		width: 100%;
+// 		height: 50px;
+// 		background: $accent-color;
+// 		font-family: 'Graphik', sans-serif;
+// 		font-weight: 700;
+// 		font-size: 5.375rem;
+// 		color: #fff;
+// 		transform: translate3d(0, 0, 0);
+// 		@include grid-breakpoint(sm) {
+// 			height: 70px;
+// 			font-size: 6rem;
+// 		}
+// 		@include grid-breakpoint(md) {
+// 			height: 130px;
+// 			font-size: 14rem;
+// 		}
+// 	}
+// }
+//
+// .pace .pace-progress:before {
+// 	content: attr(data-progress-text);
+// 	position: absolute;
+// 	right: -100%;
+// 	bottom: 0;
+// 	display: inline-block;
+// 	@include grid-breakpoint(md) {
+// 		bottom: -20px;
+// 	}
+// }
+//
+// .pace .pace-progress:after {
+// 	content: '';
+// 	position: absolute;
+// 	bottom: 0;
+// 	right: 0;
+// 	display: block;
+// 	width: 100%;
+// 	height: 100px;
+// 	background-color: #181818;
+// 	transform-origin: left;
+// 	transform: translate3d(-100%, 0, 0);
+// 	@include grid-breakpoint(md) {
+// 		height: 200px;
+// 	}
+// }
+//
+// .pace .pace-progress.done {
+// 	background-color: #0c0c0c;
+// 	transition: background-color 0.1s 1s;
+// }
+//
+// .pace .pace-progress.done:before {
+// 	transition: opacity 0.1s 1s;
+// 	opacity: 0;
+// }
+//
+// .pace .pace-progress.done:after {
+// 	animation-name: preloaderSubstrate;
+// 	animation-duration: 1s;
+// 	animation-delay: 0.5s;
+// 	animation-timing-function: ease-in-out;
+// }
+//
+// @keyframes preloaderSubstrate {
+// 	0% {
+// 		transform: translate3d(-100%, 0, 0);
+// 	}
+// 	30% {
+// 		transform: translate3d(0, 0, 0);
+// 	}
+// 	50% {
+// 		transform: translate3d(0, 0, 0);
+// 	}
+// 	70% {
+// 		transform: translate3d(0, 0, 0);
+// 	}
+// 	100% {
+// 		transform: translate3d(100%, 0, 0);
+// 	}
+// }
+//
+// .pace .pace-progress[data-progress-text="0%"]:before { right: -100% }
+// .pace .pace-progress[data-progress-text="1%"]:before { right: -99% }
+// .pace .pace-progress[data-progress-text="2%"]:before { right: -98% }
+// .pace .pace-progress[data-progress-text="3%"]:before { right: -97% }
+// .pace .pace-progress[data-progress-text="4%"]:before { right: -96% }
+// .pace .pace-progress[data-progress-text="5%"]:before { right: -95% }
+// .pace .pace-progress[data-progress-text="6%"]:before { right: -94% }
+// .pace .pace-progress[data-progress-text="7%"]:before { right: -93% }
+// .pace .pace-progress[data-progress-text="8%"]:before { right: -92% }
+// .pace .pace-progress[data-progress-text="9%"]:before { right: -91% }
+// .pace .pace-progress[data-progress-text="10%"]:before { right: -90% }
+// .pace .pace-progress[data-progress-text="11%"]:before { right: -89% }
+// .pace .pace-progress[data-progress-text="12%"]:before { right: -88% }
+// .pace .pace-progress[data-progress-text="13%"]:before { right: -87% }
+// .pace .pace-progress[data-progress-text="14%"]:before { right: -86% }
+// .pace .pace-progress[data-progress-text="15%"]:before { right: -85% }
+// .pace .pace-progress[data-progress-text="16%"]:before { right: -84% }
+// .pace .pace-progress[data-progress-text="17%"]:before { right: -83% }
+// .pace .pace-progress[data-progress-text="18%"]:before { right: -82% }
+// .pace .pace-progress[data-progress-text="19%"]:before { right: -81% }
+// .pace .pace-progress[data-progress-text="20%"]:before { right: -80% }
+// .pace .pace-progress[data-progress-text="21%"]:before { right: -79% }
+// .pace .pace-progress[data-progress-text="22%"]:before { right: -78% }
+// .pace .pace-progress[data-progress-text="23%"]:before { right: -77% }
+// .pace .pace-progress[data-progress-text="24%"]:before { right: -76% }
+// .pace .pace-progress[data-progress-text="25%"]:before { right: -75% }
+// .pace .pace-progress[data-progress-text="26%"]:before { right: -74% }
+// .pace .pace-progress[data-progress-text="27%"]:before { right: -73% }
+// .pace .pace-progress[data-progress-text="28%"]:before { right: -72% }
+// .pace .pace-progress[data-progress-text="29%"]:before { right: -71% }
+// .pace .pace-progress[data-progress-text="30%"]:before { right: -70% }
+// .pace .pace-progress[data-progress-text="31%"]:before { right: -69% }
+// .pace .pace-progress[data-progress-text="32%"]:before { right: -68% }
+// .pace .pace-progress[data-progress-text="33%"]:before { right: -67% }
+// .pace .pace-progress[data-progress-text="34%"]:before { right: -66% }
+// .pace .pace-progress[data-progress-text="35%"]:before { right: -65% }
+// .pace .pace-progress[data-progress-text="36%"]:before { right: -64% }
+// .pace .pace-progress[data-progress-text="37%"]:before { right: -63% }
+// .pace .pace-progress[data-progress-text="38%"]:before { right: -62% }
+// .pace .pace-progress[data-progress-text="39%"]:before { right: -61% }
+// .pace .pace-progress[data-progress-text="40%"]:before { right: -60% }
+// .pace .pace-progress[data-progress-text="41%"]:before { right: -59% }
+// .pace .pace-progress[data-progress-text="42%"]:before { right: -58% }
+// .pace .pace-progress[data-progress-text="43%"]:before { right: -57% }
+// .pace .pace-progress[data-progress-text="44%"]:before { right: -56% }
+// .pace .pace-progress[data-progress-text="45%"]:before { right: -55% }
+// .pace .pace-progress[data-progress-text="46%"]:before { right: -54% }
+// .pace .pace-progress[data-progress-text="47%"]:before { right: -53% }
+// .pace .pace-progress[data-progress-text="48%"]:before { right: -52% }
+// .pace .pace-progress[data-progress-text="49%"]:before { right: -51% }
+// .pace .pace-progress[data-progress-text="50%"]:before { right: -50% }
+// .pace .pace-progress[data-progress-text="51%"]:before { right: -49% }
+// .pace .pace-progress[data-progress-text="52%"]:before { right: -48% }
+// .pace .pace-progress[data-progress-text="53%"]:before { right: -47% }
+// .pace .pace-progress[data-progress-text="54%"]:before { right: -46% }
+// .pace .pace-progress[data-progress-text="55%"]:before { right: -45% }
+// .pace .pace-progress[data-progress-text="56%"]:before { right: -44% }
+// .pace .pace-progress[data-progress-text="57%"]:before { right: -43% }
+// .pace .pace-progress[data-progress-text="58%"]:before { right: -42% }
+// .pace .pace-progress[data-progress-text="59%"]:before { right: -41% }
+// .pace .pace-progress[data-progress-text="60%"]:before { right: -40% }
+// .pace .pace-progress[data-progress-text="61%"]:before { right: -39% }
+// .pace .pace-progress[data-progress-text="62%"]:before { right: -38% }
+// .pace .pace-progress[data-progress-text="63%"]:before { right: -37% }
+// .pace .pace-progress[data-progress-text="64%"]:before { right: -36% }
+// .pace .pace-progress[data-progress-text="65%"]:before { right: -35% }
+// .pace .pace-progress[data-progress-text="66%"]:before { right: -34% }
+// .pace .pace-progress[data-progress-text="67%"]:before { right: -33% }
+// .pace .pace-progress[data-progress-text="68%"]:before { right: -32% }
+// .pace .pace-progress[data-progress-text="69%"]:before { right: -31% }
+// .pace .pace-progress[data-progress-text="70%"]:before { right: -30% }
+// .pace .pace-progress[data-progress-text="71%"]:before { right: -28% }
+// .pace .pace-progress[data-progress-text="72%"]:before { right: -27% }
+// .pace .pace-progress[data-progress-text="73%"]:before { right: -26% }
+// .pace .pace-progress[data-progress-text="74%"]:before { right: -25% }
+// .pace .pace-progress[data-progress-text="75%"]:before { right: -24% }
+// .pace .pace-progress[data-progress-text="76%"]:before { right: -23% }
+// .pace .pace-progress[data-progress-text="77%"]:before { right: -22% }
+// .pace .pace-progress[data-progress-text="78%"]:before { right: -21% }
+// .pace .pace-progress[data-progress-text="79%"]:before { right: -20% }
+// .pace .pace-progress[data-progress-text="80%"]:before { right: -19% }
+// .pace .pace-progress[data-progress-text="81%"]:before { right: -18% }
+// .pace .pace-progress[data-progress-text="82%"]:before { right: -17% }
+// .pace .pace-progress[data-progress-text="83%"]:before { right: -17% }
+// .pace .pace-progress[data-progress-text="84%"]:before { right: -16% }
+// .pace .pace-progress[data-progress-text="85%"]:before { right: -15% }
+// .pace .pace-progress[data-progress-text="86%"]:before { right: -14% }
+// .pace .pace-progress[data-progress-text="87%"]:before { right: -13% }
+// .pace .pace-progress[data-progress-text="88%"]:before { right: -12% }
+// .pace .pace-progress[data-progress-text="89%"]:before { right: -11% }
+// .pace .pace-progress[data-progress-text="90%"]:before { right: -10% }
+// .pace .pace-progress[data-progress-text="91%"]:before { right: -9% }
+// .pace .pace-progress[data-progress-text="92%"]:before { right: -8% }
+// .pace .pace-progress[data-progress-text="93%"]:before { right: -7% }
+// .pace .pace-progress[data-progress-text="94%"]:before { right: -6% }
+// .pace .pace-progress[data-progress-text="95%"]:before { right: -5% }
+// .pace .pace-progress[data-progress-text="96%"]:before { right: -4% }
+// .pace .pace-progress[data-progress-text="97%"]:before { right: -3% }
+// .pace .pace-progress[data-progress-text="98%"]:before { right: -2% }
+// .pace .pace-progress[data-progress-text="99%"]:before { right: -1% }
+// .pace .pace-progress[data-progress-text="100%"]:before { right: 0 }
+//
+//
+// .pace .pace-activity {
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 100%;
+// 	z-index: 2001;
+// }
+//
+// .pace.pace-inactive {
+// 	display: none;
+// }
+
+
+
+
+
+
+
+
+
+/* This is a compiled file, you should be editing the file in the templates directory */
+// .pace {
+// 	pointer-events: none;
+// 	user-select: none;
+// 	box-sizing: border-box;
+// 	background-clip: padding-box;
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	z-index: 2000;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	width: 100%;
+// 	height: 100%;
+// 	margin: auto;
+// 	background-color: #0c0c0c;
+// 	@include grid-breakpoint(md) {
+// 		width: 100%;
+// 	}
+// }
+//
+// .pace {
+// 	.pace-progress {
+// 		position: absolute;
+// 		top: 50%;
+// 		left: 50%;
+// 		display: block;
+// 		width: 500px;
+// 		height: 500px;
+// 		margin-top: -250px;
+// 		margin-left: -250px;
+// 	}
+// }
+//
+// .pace .pace-progress:before {
+// 	content:"";
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	display: block;
+// 	width: 500px;
+// 	height: 500px;
+// 	background-image: url('../img/preloader/preloader--1.png');
+// 	background-size: cover;
+// }
+//
+// .pace .pace-progress:after {
+// 	content: '';
+// 	position: absolute;
+// 	bottom: 0;
+// 	right: 0;
+// 	display: block;
+// 	width: 100%;
+// 	height: 100px;
+// }
+//
+// .pace .pace-progress.done {
+// 	background-color: #0c0c0c;
+// 	transition: background-color 0.1s 1s;
+// }
+//
+// .pace .pace-progress.done:before {
+// 	transition: opacity 0.1s 1s;
+// 	opacity: 0;
+// }
+//
+// .pace .pace-progress.done:after {
+// }
+//
+// .pace .pace-progress[data-progress-text="0%"]:before { right: -100% }
+// .pace .pace-progress[data-progress-text="1%"]:before { right: -99% }
+// .pace .pace-progress[data-progress-text="2%"]:before { right: -98% }
+// .pace .pace-progress[data-progress-text="3%"]:before { right: -97% }
+// .pace .pace-progress[data-progress-text="4%"]:before { right: -96% }
+// .pace .pace-progress[data-progress-text="5%"]:before { right: -95% }
+// .pace .pace-progress[data-progress-text="6%"]:before { right: -94% }
+// .pace .pace-progress[data-progress-text="7%"]:before { right: -93% }
+// .pace .pace-progress[data-progress-text="8%"]:before { right: -92% }
+// .pace .pace-progress[data-progress-text="9%"]:before { right: -91% }
+// .pace .pace-progress[data-progress-text="10%"]:before { right: -90% }
+// .pace .pace-progress[data-progress-text="11%"]:before { right: -89% }
+// .pace .pace-progress[data-progress-text="12%"]:before { right: -88% }
+// .pace .pace-progress[data-progress-text="13%"]:before { right: -87% }
+// .pace .pace-progress[data-progress-text="14%"]:before { right: -86% }
+// .pace .pace-progress[data-progress-text="15%"]:before { right: -85% }
+// .pace .pace-progress[data-progress-text="16%"]:before { right: -84% }
+// .pace .pace-progress[data-progress-text="17%"]:before { right: -83% }
+// .pace .pace-progress[data-progress-text="18%"]:before { right: -82% }
+// .pace .pace-progress[data-progress-text="19%"]:before { right: -81% }
+// .pace .pace-progress[data-progress-text="20%"]:before { right: -80% }
+// .pace .pace-progress[data-progress-text="21%"]:before { right: -79% }
+// .pace .pace-progress[data-progress-text="22%"]:before { right: -78% }
+// .pace .pace-progress[data-progress-text="23%"]:before { right: -77% }
+// .pace .pace-progress[data-progress-text="24%"]:before { right: -76% }
+// .pace .pace-progress[data-progress-text="25%"]:before { right: -75% }
+// .pace .pace-progress[data-progress-text="26%"]:before { right: -74% }
+// .pace .pace-progress[data-progress-text="27%"]:before { right: -73% }
+// .pace .pace-progress[data-progress-text="28%"]:before { right: -72% }
+// .pace .pace-progress[data-progress-text="29%"]:before { right: -71% }
+// .pace .pace-progress[data-progress-text="30%"]:before { right: -70% }
+// .pace .pace-progress[data-progress-text="31%"]:before { right: -69% }
+// .pace .pace-progress[data-progress-text="32%"]:before { right: -68% }
+// .pace .pace-progress[data-progress-text="33%"]:before { right: -67% }
+// .pace .pace-progress[data-progress-text="34%"]:before { right: -66% }
+// .pace .pace-progress[data-progress-text="35%"]:before { right: -65% }
+// .pace .pace-progress[data-progress-text="36%"]:before { right: -64% }
+// .pace .pace-progress[data-progress-text="37%"]:before { right: -63% }
+// .pace .pace-progress[data-progress-text="38%"]:before { right: -62% }
+// .pace .pace-progress[data-progress-text="39%"]:before { right: -61% }
+// .pace .pace-progress[data-progress-text="40%"]:before { right: -60% }
+// .pace .pace-progress[data-progress-text="41%"]:before { right: -59% }
+// .pace .pace-progress[data-progress-text="42%"]:before { right: -58% }
+// .pace .pace-progress[data-progress-text="43%"]:before { right: -57% }
+// .pace .pace-progress[data-progress-text="44%"]:before { right: -56% }
+// .pace .pace-progress[data-progress-text="45%"]:before { right: -55% }
+// .pace .pace-progress[data-progress-text="46%"]:before { right: -54% }
+// .pace .pace-progress[data-progress-text="47%"]:before { right: -53% }
+// .pace .pace-progress[data-progress-text="48%"]:before { right: -52% }
+// .pace .pace-progress[data-progress-text="49%"]:before { right: -51% }
+// .pace .pace-progress[data-progress-text="50%"]:before { right: -50% }
+// .pace .pace-progress[data-progress-text="51%"]:before { right: -49% }
+// .pace .pace-progress[data-progress-text="52%"]:before { right: -48% }
+// .pace .pace-progress[data-progress-text="53%"]:before { right: -47% }
+// .pace .pace-progress[data-progress-text="54%"]:before { right: -46% }
+// .pace .pace-progress[data-progress-text="55%"]:before { right: -45% }
+// .pace .pace-progress[data-progress-text="56%"]:before { right: -44% }
+// .pace .pace-progress[data-progress-text="57%"]:before { right: -43% }
+// .pace .pace-progress[data-progress-text="58%"]:before { right: -42% }
+// .pace .pace-progress[data-progress-text="59%"]:before { right: -41% }
+// .pace .pace-progress[data-progress-text="60%"]:before { right: -40% }
+// .pace .pace-progress[data-progress-text="61%"]:before { right: -39% }
+// .pace .pace-progress[data-progress-text="62%"]:before { right: -38% }
+// .pace .pace-progress[data-progress-text="63%"]:before { right: -37% }
+// .pace .pace-progress[data-progress-text="64%"]:before { right: -36% }
+// .pace .pace-progress[data-progress-text="65%"]:before { right: -35% }
+// .pace .pace-progress[data-progress-text="66%"]:before { right: -34% }
+// .pace .pace-progress[data-progress-text="67%"]:before { right: -33% }
+// .pace .pace-progress[data-progress-text="68%"]:before { right: -32% }
+// .pace .pace-progress[data-progress-text="69%"]:before { right: -31% }
+// .pace .pace-progress[data-progress-text="70%"]:before { right: -30% }
+// .pace .pace-progress[data-progress-text="71%"]:before { right: -28% }
+// .pace .pace-progress[data-progress-text="72%"]:before { right: -27% }
+// .pace .pace-progress[data-progress-text="73%"]:before { right: -26% }
+// .pace .pace-progress[data-progress-text="74%"]:before { right: -25% }
+// .pace .pace-progress[data-progress-text="75%"]:before { right: -24% }
+// .pace .pace-progress[data-progress-text="76%"]:before { right: -23% }
+// .pace .pace-progress[data-progress-text="77%"]:before { right: -22% }
+// .pace .pace-progress[data-progress-text="78%"]:before { right: -21% }
+// .pace .pace-progress[data-progress-text="79%"]:before { right: -20% }
+// .pace .pace-progress[data-progress-text="80%"]:before { right: -19% }
+// .pace .pace-progress[data-progress-text="81%"]:before { right: -18% }
+// .pace .pace-progress[data-progress-text="82%"]:before { right: -17% }
+// .pace .pace-progress[data-progress-text="83%"]:before { right: -17% }
+// .pace .pace-progress[data-progress-text="84%"]:before { right: -16% }
+// .pace .pace-progress[data-progress-text="85%"]:before { right: -15% }
+// .pace .pace-progress[data-progress-text="86%"]:before { right: -14% }
+// .pace .pace-progress[data-progress-text="87%"]:before { right: -13% }
+// .pace .pace-progress[data-progress-text="88%"]:before { right: -12% }
+// .pace .pace-progress[data-progress-text="89%"]:before { right: -11% }
+// .pace .pace-progress[data-progress-text="90%"]:before { right: -10% }
+// .pace .pace-progress[data-progress-text="91%"]:before { right: -9% }
+// .pace .pace-progress[data-progress-text="92%"]:before { right: -8% }
+// .pace .pace-progress[data-progress-text="93%"]:before { right: -7% }
+// .pace .pace-progress[data-progress-text="94%"]:before { right: -6% }
+// .pace .pace-progress[data-progress-text="95%"]:before { right: -5% }
+// .pace .pace-progress[data-progress-text="96%"]:before { right: -4% }
+// .pace .pace-progress[data-progress-text="97%"]:before { right: -3% }
+// .pace .pace-progress[data-progress-text="98%"]:before { right: -2% }
+// .pace .pace-progress[data-progress-text="99%"]:before { right: -1% }
+// .pace .pace-progress[data-progress-text="100%"]:before { right: 0 }
+//
+//
+// .pace .pace-activity {
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 100%;
+// 	z-index: 2001;
+// }
+//
+// .pace.pace-inactive {
+// 	display: none;
+// }
+
+
+
+.pace {
+	pointer-events: none;
+	user-select: none;
+	box-sizing: border-box;
+	background-clip: padding-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	background-color: #0c0c0c;
+	@include grid-breakpoint(md) {
+		width: 100%;
+	}
+}
+
+.pace .pace-activity {
+	position: relative;
+}
+
+.pace.pace-inactive {
+	display: none;
+}

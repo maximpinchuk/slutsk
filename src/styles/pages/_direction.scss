@@ -1,0 +1,123 @@
+.direction-item {
+	margin: 110px 0;
+	@include grid-breakpoint(sm) {
+		display: flex;
+		flex-direction: row-reverse;
+		margin: 130px 0;
+	}
+	.direction-item__image-wrapper {
+		@include grid-col(12 12 5 4 4);
+		padding: 0;
+		@include grid-breakpoint(sm) {
+			height: 380px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.direction-item__image {
+			height: 100%;
+		}
+	}
+	.direction-item__text-block {
+		@include grid-col(12 12 7 8 8);
+		margin: 40px 0 0 0;
+		@include grid-breakpoint(sm) {
+			margin: 0;
+		}
+		.text-block__title {
+			margin: 0;
+			font-family: 'Graphik', sans-serif;
+			font-weight: 600;
+			font-size: 1.125rem;
+			color: $accent-color;
+			line-height: (26/18);
+			letter-spacing: 0.075em;
+			text-transform: uppercase;
+			@include grid-breakpoint(sm) {
+				font-size: 1.375rem;
+			}
+		}
+		.text-block__position {
+			margin: 15px 0 40px 0;
+			font-family: 'Graphik', sans-serif;
+			font-weight: 600;
+			font-size: 0.875rem;
+			color: $text-primary;
+			line-height: (28/14);
+			letter-spacing: 0.075em;
+			text-transform: uppercase;
+			@include grid-breakpoint(sm) {
+
+			}
+		}
+		.text-block__subtitle {
+			display: inline-block;
+			margin: 25px 0 10px 0;
+			font-family: 'Graphik', sans-serif;
+			font-weight: 700;
+			font-size: 0.875rem;
+			color: $accent-color;
+			line-height: (28/14);
+			letter-spacing: 0.075em;
+			text-transform: uppercase;
+			@include grid-breakpoint(sm) {
+				margin: 25px 0 0 0;
+			}
+			&.tel {
+				margin-top: 0;
+			}
+		}
+		.text-block__descr {
+			margin: 7px 0 0 0;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 1rem;
+			color: $text-primary;
+			line-height: (24/16);
+			@include grid-breakpoint(sm) {
+				margin: 3px 0 0 0;
+			}
+		}
+		.text-block__tel {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 1rem;
+			color: $text-primary;
+			line-height: (24/16);
+			@include grid-breakpoint(sm) {
+				font-size: 0.875rem;
+				line-height: 2;
+			}
+			@include grid-breakpoint(md) {
+				margin-left: 7px;
+			}
+		}
+
+		.text-block__contacts {
+			display: flex;
+			flex-direction: column;
+			margin: 25px 0 0 0;
+			@include grid-breakpoint(sm) {
+				width: 70%;
+			}
+			@include grid-breakpoint(md) {
+				flex-direction: row;
+				width: 100%;
+			}
+			.contacts__row {
+				display: flex;
+				justify-content: space-between;
+				@include grid-breakpoint(md) {
+					justify-content: flex-start;
+					&:nth-child(2) {
+						margin-left: 100px;
+					}
+				}
+				@include grid-breakpoint(lg) {
+					&:nth-child(2) {
+						margin-left: 140px;
+					}
+				}
+			}
+		}
+	}
+}

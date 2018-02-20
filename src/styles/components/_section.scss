@@ -1,0 +1,157 @@
+/* Section element */
+.section {
+	padding: 100px 0 120px 0;
+	@include grid-breakpoint(sm) {
+		padding: 100px 0 100px 0;
+	}
+	&.mainpage {
+		padding: 100px 0 120px 0;
+		@include grid-breakpoint(sm) {
+			padding: 135px 0 130px 0;
+		}	
+	}
+
+
+	&-bg {
+		&--dark {
+			background-color: #f6f6f6;
+		}
+	}
+
+	&__pb--none {
+		padding-bottom: 0;
+		@include grid-breakpoint(sm) {
+			padding-bottom: 0;
+		}
+	}
+
+	/* section title */
+	&__title {
+		margin: 0 0 50px 0;
+		font-family: 'Graphik', sans-serif;
+		font-weight: 700;
+		font-size: 2rem;
+		line-height: (44/32);
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		word-wrap: break-word;
+		@include grid-breakpoint(sm) {
+			font-size: 2.875rem;
+			line-height: (60/46);
+		}
+		&--large {
+			margin: 0 0 50px 0;
+			font-size: 2rem;
+			line-height: (44/32);
+			@include grid-breakpoint(sm) {
+				font-size: 2.875rem;
+				line-height: (60/46);
+			}
+		}
+		&--small {
+			margin: 0 0 30px 0;
+			font-size: 1.125rem;
+			line-height: (32/18);
+			@include grid-breakpoint(sm) {
+				font-size: 1.375rem;
+				line-height: (38/22);
+			}
+		}
+		&--dark {
+			color: $section-title--dark;
+		}
+		&--light {
+			color: $section-title--light;
+		}
+		&--center {
+			@include grid-breakpoint(sm) {
+				@include grid-col(12 12 10);
+				@include grid-offset(null null 1);
+				text-align: center;
+			}
+		}	
+	}
+
+	/* section subtitle */
+	&__subtitle {
+		@include grid-col(12 12 8);
+		margin: 0 0 60px 0;
+		padding: 0;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		font-size: 1rem;
+		line-height: (24/16);
+		&.width-50 {
+			@include grid-col(12 12 6);
+		}
+		@include grid-breakpoint(sm) {
+			// padding: 0 15px;
+			font-size: 1.0625rem;
+			line-height: (28/18);
+		}
+		&--dark {
+			color: $text-primary;
+		}
+		&--light {
+			color: $text-secondary;
+		}
+		&--center {
+			@include grid-breakpoint(sm) {
+				@include grid-col(12 12 8);
+				@include grid-offset(null null 2);
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+/* Section with map */
+.map-section {
+	padding: 0 0 120px 0;
+	@include grid-breakpoint(sm) {
+		padding: 0 0 130px 0;
+	}
+}
+
+
+
+/* section with image on background */
+.section--image {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 450px;
+	padding: 0;
+	@include grid-breakpoint(sm) {
+		padding: 0;
+		height: 90vh;
+	}
+	.section--image__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #060e2c;
+			opacity: 0.7;
+		}
+	}
+	.section__title--center {
+		text-align: center;
+		@include grid-breakpoint(sm) {
+			@include grid-col(12);
+			margin-left: 0 !important;
+		}
+	}
+}

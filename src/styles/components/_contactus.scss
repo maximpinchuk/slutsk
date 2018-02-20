@@ -1,0 +1,34 @@
+.contactus-block {
+	@include grid-row();
+	.contactus-block__text-block {
+		@include grid-col(12 12 5);
+		.text-block__text {
+			margin: 0;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 1rem;
+			color: $text-primary;
+			line-height: (24/16);
+			@include grid-breakpoint(sm) {
+				font-size: 1.0625rem;
+				line-height: (28/18);
+			}
+		}
+	}
+	.contactus-block__form-block {
+		@include grid-col(12 12 7);
+		.form-block__form {
+			margin-top: 20px;
+			@include grid-breakpoint(sm) {
+				display: flex;
+				justify-content: space-between;
+				margin-top: -40px;
+			}
+			.form__col {
+				@include grid-breakpoint(sm) {
+					width: 47%;
+				}
+			}
+		}
+	}
+}

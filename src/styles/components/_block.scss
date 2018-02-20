@@ -1,0 +1,24 @@
+.block {
+	margin: 100px 0;
+	@include grid-breakpoint(sm) {
+		margin: 130px 0;
+	}
+
+	&__mb--none {
+		margin-bottom: 0;
+	}
+	
+	&__title {
+		margin: 0;
+		font-family: 'Graphik', sans-serif;
+		font-weight: 700;
+		font-size: 0.875rem;
+		color: $text-primary;
+		line-height: (24/14);
+		text-transform: uppercase;
+		@include grid-breakpoint(sm) {
+			font-size: 1.125rem;
+			line-height: (30/18);
+		}
+	}
+}

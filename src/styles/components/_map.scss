@@ -1,0 +1,475 @@
+.map--mainpage {
+	position: relative;
+	margin-top: 80px;
+
+	.map-svg {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: auto;
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+		@media (min-width: 350px) {
+			width: 350px;
+		}
+		@include grid-breakpoint(xs) {
+			width: 500px;
+		}
+		@include grid-breakpoint(sm) {
+			width: 100%;
+			opacity: 0;
+			transform: translate3d(0, 200px, 0);
+		}
+	}
+
+	.mark-block {
+		position: absolute;
+		&--ru {
+			top: 10.6842105%;
+			right: 10.8245614%;
+			@media (min-width: 350px) {
+				top: 10.6842105%;
+				right: 10.8245614%;
+			}
+			@include grid-breakpoint(xs) {
+				top: 23.6842105%;
+				right: 29.8245614%;
+			}
+			@include grid-breakpoint(sm) {
+				top: 130px;
+				right: 270px;
+			}
+			@include grid-breakpoint(md) {
+				top: 180px;
+				right: 340px;
+			}
+			@include grid-breakpoint(lg) {
+				top: 180px;
+				right: 340px;
+			}
+		}
+		&--kz {
+			top: 36.3684211%;
+			right: 29.8596491%;
+			@media (min-width: 350px) {
+				top: 36.3684211%;
+				right: 29.8596491%;
+			}
+			@include grid-breakpoint(xs) {
+				top: 44.3684211%;
+				right: 40.8596491%;
+			}
+			@include grid-breakpoint(sm) {
+				top: 200px;
+				right: 300px;
+			}
+			@include grid-breakpoint(md) {
+				top: 290px;
+				right: 400px;
+			}
+			@include grid-breakpoint(lg) {
+				top: 360px;
+				right: 500px;
+			}
+		}
+		&--uz {
+			right: 30.1754386%;
+			bottom: 33.2105263%;
+			@media (min-width: 350px) {
+				right: 35.1754386%;
+				bottom: 33.2105263%;
+			}
+			@include grid-breakpoint(xs) {
+				right: 42.8596491%;
+				bottom: 33.2105263%;
+			}
+			@include grid-breakpoint(sm) {
+				right: 300px;
+				bottom: 180px;
+			}
+			@include grid-breakpoint(md) {
+				right: 435px;
+				bottom: 220px;
+			}
+			@include grid-breakpoint(lg) {
+				right: 525px;
+				bottom: 270px;
+			}
+		}
+		&--gr {
+			bottom: 31.1842105%;
+			left: 29.8245614%;
+			@media (min-width: 350px) {
+				bottom: 31.1842105%;
+				left: 29.8245614%;
+			}
+			@include grid-breakpoint(xs) {
+				bottom: 32.1842105%;
+				left: 33.8245614%;
+			}
+			@include grid-breakpoint(sm) {
+				bottom: 150px;
+				left: 215px;
+			}
+			@include grid-breakpoint(md) {
+				bottom: 210px;
+				left: 285px;
+			}
+			@include grid-breakpoint(lg) {
+				bottom: 250px;
+				left: 340px;
+			}
+		}
+		&--uk {
+			top: 45.6315789%;
+			left: 24.122807%;
+			@media (min-width: 350px) {
+				top: 46.6315789%;
+				left: 25.122807%;
+			}
+			@include grid-breakpoint(xs) {
+				top: 51.6315789%;
+				left: 30.122807%;
+			}
+			@include grid-breakpoint(sm) {
+				top: 240px;
+				left: 170px;
+			}
+			@include grid-breakpoint(md) {
+				top: 325px;
+				left: 230px;
+			}
+			@include grid-breakpoint(lg) {
+				top: 400px;
+				left: 275px;
+			}
+		}
+		&--md {
+			top: 51.1052632%;
+			left: 7.4736884%;
+			@media (min-width: 350px) {
+				top: 52.1052632%;
+				left: 10.4736884%;
+			}
+			@include grid-breakpoint(xs) {
+				top: 54.1052632%;
+				left: 21.4736884%;
+			}
+			@include grid-breakpoint(sm) {
+				top: 260px;
+				left: 105px;
+			}
+			@include grid-breakpoint(md) {
+				top: 350px;
+				left: 150px;
+			}
+			@include grid-breakpoint(lg) {
+				top: 410px;
+				left: 165px;
+			}
+		}
+		&--lt {
+			top: 41.7105263%;
+			left: 9.7192982%;
+			@media (min-width: 350px) {
+				top: 43.7105263%;
+				left: 10.7192982%;
+			}
+			@include grid-breakpoint(xs) {
+				top: 44.7105263%;
+				left: 20.7192982%;
+			}
+			@include grid-breakpoint(sm) {
+				top: 215px;
+				left: 100px;
+			}
+			@include grid-breakpoint(md) {
+				top: 290px;
+				left: 210px;
+			}
+			@include grid-breakpoint(lg) {
+				top: 340px;
+				left: 160px;
+			}
+		}
+		.mark-block__title {
+			display: block;
+			font-family: 'Graphik', sans-serif;
+			font-weight: 700;
+			color: $accent-color;
+			letter-spacing: 0.075em;
+			text-transform: uppercase;
+			@include grid-breakpoint(md) {
+				opacity: 0;
+				transition: opacity 0.3s;
+			}
+			&--ru {
+				font-size: 0.875rem; // 14px
+				@include grid-breakpoint(sm) {
+					font-size: 1.125rem; // 18px
+				}
+				@include grid-breakpoint(md) {
+					font-size: 1.25rem; // 20px
+					transition-delay: 2.4s; 
+				}
+				@include grid-breakpoint(lg) {
+					font-size: 1.3125rem; // 21px
+				}
+			}
+			&--kz {
+				font-size: 0.75rem; // 12px
+				@include grid-breakpoint(sm) {
+					font-size: 1.0625rem; // 17px
+				}
+				@include grid-breakpoint(md) {
+					font-size: 1.125rem; // 18px
+					transition-delay: 2.6s;
+				}
+				@include grid-breakpoint(lg) {
+					font-size: 1.1875rem; // 19px
+				}
+			}
+			&--uz {
+				font-size: 0.625rem; // 10px
+				@include grid-breakpoint(sm) {
+					font-size: 0.9375rem; // 15px
+				}
+				@include grid-breakpoint(md) {
+					font-size: 1rem; // 16px
+					transition-delay: 2.8s; 
+				}
+				@include grid-breakpoint(lg) {
+					font-size: 1.0625rem; // 17px
+				}
+			}
+			&--gr {
+				font-size: 0.5625rem; // 9px
+				@include grid-breakpoint(sm) {
+					font-size: 0.875rem; // 14px
+				}
+				@include grid-breakpoint(md) {
+					font-size: 0.9375rem; // 15px
+					transition-delay: 3s; 
+				}
+				@include grid-breakpoint(lg) {
+					font-size: 1rem; // 16px
+				}
+			}
+			&--uk {
+				font-size: 0.5625rem; // 9px
+				@include grid-breakpoint(sm) {
+					font-size: 0.875rem; // 14px
+				}
+				@include grid-breakpoint(md) {
+					font-size: 0.9375rem; // 15px
+					transition-delay: 3.2s;
+				}
+				@include grid-breakpoint(lg) {
+					font-size: 1rem; // 16px
+				}
+			}
+			&--md {
+				font-size: 0.4375rem; // 7px
+				@include grid-breakpoint(sm) {
+					font-size: 0.5625rem; // 9px
+				}
+				@include grid-breakpoint(md) {
+					font-size: 0.6875rem; // 11px
+					transition-delay: 3.4s;
+				}
+				@include grid-breakpoint(lg) {
+					font-size: 0.875rem; // 14px
+				}
+			}
+			&--lt {
+				font-size: 0.4375rem; // 7px
+				@include grid-breakpoint(sm) {
+					font-size: 0.5625rem; // 9px
+				}
+				@include grid-breakpoint(md) {
+					font-size: 0.6875rem; // 11px
+					transition-delay: 3.6s; 
+				}
+				@include grid-breakpoint(lg) {
+					font-size: 0.875rem; // 14px
+				}
+			}
+		}
+		.mark-block__circle {
+			display: block;
+			background-color: $accent-color;
+			border-radius: 50%;
+			@include grid-breakpoint(md) {
+				transform-origin: center;
+				transform: scale3d(0, 0, 0);
+				transition: transform 0.3s;
+			}
+			&--ru {
+				width: 13px;
+				height: 13px;
+				margin-top: 5px;
+				@include grid-breakpoint(sm) {
+					width: 19px;
+					height: 19px;
+					margin-top: 7px;
+				}	
+				@include grid-breakpoint(md) {
+					width: 26px;
+					height: 26px;
+					margin-top: 9px;
+					transition-delay: 1s;
+				}
+				@include grid-breakpoint(lg) {
+					width: 33px;
+					height: 33px;
+					margin-top: 12px;
+				}
+			}
+			&--kz {
+				width: 11px;
+				height: 11px;
+				margin-top: 5px;
+				@include grid-breakpoint(sm) {
+					width: 17px;
+					height: 17px;
+					margin-top: 7px;
+				}	
+				@include grid-breakpoint(md) {
+					width: 23px;
+					height: 23px;
+					margin-top: 9px;
+					transition-delay: 1.2s;
+				}
+				@include grid-breakpoint(lg) {
+					width: 29px;
+					height: 29px;
+					margin-top: 12px;
+				}
+			}
+			&--uz {
+				width: 8px;
+				height: 8px;
+				margin-bottom: 5px;
+				@include grid-breakpoint(sm) {
+					width: 12px;
+					height: 12px;
+					margin-top: 7px;
+				}	
+				@include grid-breakpoint(md) {
+					width: 16px;
+					height: 16px;
+					margin-top: 9px;
+					transition-delay: 1.4s;
+				}
+				@include grid-breakpoint(lg) {
+					width: 20px;
+					height: 20px;
+					margin-top: 12px;
+				}
+			}
+			&--gr {
+				width: 7.5px;
+				height: 7.5px;
+				margin-bottom: 5px;
+				@include grid-breakpoint(sm) {
+					width: 11px;
+					height: 11px;
+					margin-bottom: 7px;
+				}	
+				@include grid-breakpoint(md) {
+					width: 15px;
+					height: 15px;
+					margin-bottom: 9px;
+					transition-delay: 1.6s;
+				}
+				@include grid-breakpoint(lg) {
+					width: 19px;
+					height: 19px;
+					margin-bottom: 12px;
+				}
+			}
+			&--uk {
+				width: 7.5px;
+				height: 7.5px;
+				margin-top: 2px;
+				@include grid-breakpoint(sm) {
+					width: 11px;
+					height: 11px;
+					margin-bottom: 4px;
+				}	
+				@include grid-breakpoint(md) {
+					width: 15px;
+					height: 15px;
+					margin-bottom: 7px;
+					transition-delay: 1.8s;
+				}
+				@include grid-breakpoint(lg) {
+					width: 19px;
+					height: 19px;
+					margin-bottom: 10px;
+				}
+			}
+			&--md {
+				float: right;
+				width: 3px;
+				height: 3px;
+				margin-top: 2px;
+				@include grid-breakpoint(sm) {
+					width: 5px;
+					height: 5px;
+					margin-top: 4px;
+				}	
+				@include grid-breakpoint(md) {
+					width: 6.5px;
+					height: 6.5px;
+					margin-top: 5px;
+					transition-delay: 2s;
+				}
+				@include grid-breakpoint(lg) {
+					width: 8px;
+					height: 8px;
+					margin-top: 6px;
+				}
+			}
+			&--lt {
+				float: right;
+				width: 3px;
+				height: 3px;
+				margin-top: 2px;
+				@include grid-breakpoint(sm) {
+					width: 5px;
+					height: 5px;
+					margin-top: 4px;
+				}	
+				@include grid-breakpoint(md) {
+					width: 6.5px;
+					height: 6.5px;
+					margin-top: 5px;
+					transition-delay: 2.2s;
+				}
+				@include grid-breakpoint(lg) {
+					width: 8px;
+					height: 8px;
+					margin-top: 6px;
+				}
+			}
+		}
+	}
+
+	&.in-view {
+		.map-svg {
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+			transition: opacity 0.6s, transform 0.6s;
+			transition-delay: 0.3s;
+		}
+		.mark-block {
+			.mark-block__title {
+				opacity: 1;
+			}
+			.mark-block__circle {
+				transform: scale3d(1, 1, 1);
+			}
+		}
+	}
+}

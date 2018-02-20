@@ -1,0 +1,30 @@
+.compat-object-fit {
+	background-size: cover;
+	img {
+		opacity: 0;
+	}
+}
+
+// section height
+.cssvhunit .section--full {
+	height: 100vh;
+}
+
+.no-cssvhunit .section--full {
+	height: 480px;
+	@include grid-breakpoint(sm) {
+		height: 650px;
+	}
+}
+
+// banners height support
+.cssvhunit .banner {
+	height: 100vh;
+	@include grid-breakpoint(sm) {
+		height: 78vh;
+		min-height: 350px;
+	}
+}
+.no-cssvhunit .banner {
+	height: 480px;
+}

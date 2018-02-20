@@ -1,0 +1,117 @@
+.product-data {
+	@include grid-row();
+	margin: 90px 0 0 0;
+	.product-data__image-block {
+		position: relative;
+		@include grid-col(12 12 5);
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 15px;
+			z-index: -1;
+			width: 260px;
+			height: 260px;
+			background-color: $accent-color;
+		}
+		.image-block__image {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 450px;
+			margin: 20px 0 0 20px;
+			background-color: #f4f4f4;
+			.image-wrapper__img {
+				width: 220px;
+				height: 340px;
+				// box-shadow: -10px -10px 50px 3px rgba(0,0,0,0.3);
+			}
+		}
+	}
+	.product-data__descr {
+		@include grid-col(12 12 6);
+		@include grid-offset(null null 1);
+		margin: 60px 0 0 0;
+		padding: 0 30px;
+		@include grid-breakpoint(sm) {
+			margin-top: 0;
+			padding: 0 15px;
+		}
+		.descr__text {
+			margin: 0;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 1rem;
+			color: $text-primary;
+			line-height: (24/16);
+			@include grid-breakpoint(sm) {
+				margin: 0 0 65px 0;
+				font-size: 1.0625rem;
+				line-height: (27/17);
+			}
+		}
+		.descr__attribute {
+			margin: 35px 0;
+			@include grid-breakpoint(sm) {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				margin: 15px 0;
+			}
+			.attribute__label {
+				.label__title {
+					margin: 0;
+					font-family: 'Graphik', sans-serif;
+					font-weight: 600;
+					font-size: 0.75rem;
+					color: $accent-color;
+					line-height: (28/12);
+					letter-spacing: 0.075em;
+					text-transform: uppercase;
+				}
+				.label__subtitle {
+					margin: 0;
+					font-family: 'Open Sans', sans-serif;
+					font-weight: 400;
+					font-size: 0.75rem;
+					color: $accent-color;
+					line-height: (21/12);
+					text-transform: uppercase;
+				}
+			}
+			.attribute__descr {
+				margin: 5px 0 0 0;
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 400;
+				font-size: 0.9375rem;
+				color: $text-primary;
+				line-height: (27/15);
+				@include grid-breakpoint(sm) {
+					margin: 0;
+					line-height: 1.33;
+				}
+			}	
+		}
+		.descr__additional-info {
+			margin: 55px 0 0 0;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 0.875rem;
+			color: $text-primary;
+			line-height: (22/14);
+			&:before {
+				content: '';
+				display: block;
+				width: 33px;
+				height: 4px;
+				margin: 0 0 5px 0;
+				background-color: $accent-color;
+			}
+			@include grid-breakpoint(sm) {
+				margin: 45px 0 0 0;
+				font-size: 0.9375rem;
+				line-height: (27/15);
+			}
+		}
+	}
+}

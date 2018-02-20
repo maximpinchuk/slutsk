@@ -1,0 +1,267 @@
+.history-wrapper {
+	position: relative;
+	.timeline {	
+		position: absolute;
+		top: 0;
+		left: 5px;
+		width: 2px;
+		height: 100%;
+		background-color: $accent-color;
+		transform: scaleY(1);
+		@include grid-breakpoint(md) {
+			// top: 200px;
+			top: 0;
+			left: 50%;
+			// height: calc(100% - 200px);
+			height: 100%;
+			z-index: -1;
+			margin-left: -1px;
+			transform-origin: top;
+			transform: scaleY(0);
+			// transition: transform 0.1s ease-in-out;
+		}
+	}
+
+	.history-item {
+		margin: 100px 0 0 0;
+		@include grid-breakpoint(md) {
+			display: flex;
+			margin: 0 0 220px 0;
+		}
+
+		/*
+		 * Общие стили для контейнеров с описанием и фото/видео
+		 */
+		.image-block,
+		.history-item__text-block {
+			@include grid-breakpoint(md) {
+				width: 50%;
+			}
+		}
+
+		/*
+		 * Стили для блока с фото/видео вне зависимости от положения
+		 */
+		.image-block {
+			.history-item__image {
+				@include grid-breakpoint(md) {
+					position: relative;
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-color: $accent-color;
+						transform-origin: top;
+						transition: transform 0.4s;
+						transition-delay: 0.8s;
+					}
+					&:after {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						z-index: 2;
+						width: 100%;
+						height: 100%;
+						background-color: #fff;
+						transform-origin: top;
+						transition: transform 0.4s;
+						transition-delay: 0.4s;
+					}
+				}
+			}
+		}	
+		/*
+		 * Стили для блока с описанием вехи вне зависимости от положения 
+		 */
+		.history-item__text-block {
+			position: relative;
+			margin: 50px 0 0 0;
+			padding: 0 0 0 30px;
+			.timeline__mark {
+				position: absolute;
+			    top: -6px;
+				display: inline-block;
+				width: 28px;
+				height: 28px;
+				border: 8px solid #fff;
+				background-color: $accent-color;
+				border-radius: 50%;
+				@include grid-breakpoint(md) {
+					transform-origin: center;
+					transform: scale3d(0, 0, 0);
+					transition: transform 0.4s;
+					transition-delay: 0;
+				}
+			}
+			.text-block__date {
+				display: block;
+				font-family: 'Graphik', sans-serif;
+				font-weight: 700;
+				font-size: 0.75rem;
+				color: $accent-color;
+				letter-spacing: 0.075em;
+				@include grid-breakpoint(md) {
+					font-size: 0.875rem;
+					opacity: 0;
+					transform: translate3d(0, 50px, 0);
+					transition: transform 0.3s, opacity 0.3s;
+					transition-delay: 1.1s;
+				}
+			}
+			.text-block__title {
+				margin: 25px 0 25px 0;
+				font-family: 'Graphik', sans-serif;
+				font-weight: 700;
+				font-size: 1.625rem;
+				color: $section-title--dark;
+				line-height: (38/26);
+				letter-spacing: 0.075em;
+				text-transform: uppercase;
+				@include grid-breakpoint(md) {
+					font-size: 2.25rem;
+					line-height: (52/36);
+					opacity: 0;
+					transform: translate3d(0, 50px, 0);
+					transition: transform 0.3s, opacity 0.3s;
+					transition-delay: 1.4s;
+				}
+			}
+			.text-block__descr {
+				margin: 0;
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 400;
+				font-size: 1rem;
+				color: #5d5d5d;
+				line-height: (24/16);
+				@include grid-breakpoint(md) {
+					font-size: 1.0625rem;
+					line-height: (27/17);
+					opacity: 0;
+					transform: translate3d(0, 50px, 0);
+					transition: transform 0.3s, opacity 0.3s;
+					transition-delay: 1.7s;
+				}
+			}
+		}
+
+		/*
+		 * Стили для блока, в котором фото/видео слева, а текст справа
+		 */
+		&.left {
+			.image-block {
+				.history-item__image {
+					width: calc(100% - 30px);
+					height: 310px;
+					margin-left: 30px;
+					@include grid-breakpoint(md) {
+						width: 90%;
+						height: 550px;
+						margin-left: 0;	
+					}
+				}
+			}
+			.history-item__text-block {
+				@include grid-breakpoint(md) {
+					margin: 200px 0 0 0;
+					padding: 0 0 0 60px;
+				}
+				.timeline__mark {
+					left: 6px;
+					margin-left: -14px;
+					@include grid-breakpoint(md) {
+						left: 0;
+					}
+				}
+			}
+		}
+
+		/*
+		 * Стили для блока, в котором фото/видео справа, а текст слева
+		 */
+		&.right {
+			@include grid-breakpoint(md) {
+				flex-direction: row-reverse;
+			}
+			.image-block {
+				.history-item__image {
+					width: calc(100% - 30px);
+					height: 205px;
+					margin-left: 30px;
+					@include grid-breakpoint(md) {
+						width: 90%;
+						height: 440px;
+						margin-left: 10%;
+					}
+				}
+			}
+			.history-item__text-block {
+				@include grid-breakpoint(md) {
+					margin: 120px 0 0 0;
+					padding: 0 60px 0 0;
+				}
+				.timeline__mark {
+					left: -8px;
+					margin-right: -14px;
+					@include grid-breakpoint(md) {
+						right: 0;
+						left: auto;	
+					}
+				}
+				.text-block__date {
+					@include grid-breakpoint(md) {
+						text-align: right;	
+					}
+				}
+				.text-block__title {
+					@include grid-breakpoint(md) {
+						text-align: right;	
+					}
+				}
+				.text-block__descr {
+					@include grid-breakpoint(md) {
+						text-align: right;	
+					}
+				}
+			}
+		}
+
+		/*
+		 * Анимация блоков при скролле
+		 */
+		&.in-view {
+			@include grid-breakpoint(md) {
+				.image-block {
+					.history-item__image {
+						&:before {
+							transform: scaleY(0);
+						}
+						&:after {
+							transform: scaleY(0);
+						}
+					}
+				}
+				.history-item__text-block {
+					.timeline__mark {
+						transform: scale3d(1, 1, 1);
+					}
+					.text-block__date {
+						opacity: 1;
+						transform: translate3d(0, 0, 0);
+					}
+					.text-block__title {
+						opacity: 1;
+						transform: translate3d(0, 0, 0);
+					}
+					.text-block__descr {
+						opacity: 1;
+						transform: translate3d(0, 0, 0);
+					}
+				}
+			}
+		}
+	}
+}

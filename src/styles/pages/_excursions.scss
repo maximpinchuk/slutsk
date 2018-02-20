@@ -1,0 +1,157 @@
+.visit-info {
+	@include grid-row();
+	margin: 120px 0;
+	.visit-info__item {
+		@include grid-col(12 12 6 3);
+		padding: 0;
+		.item__title {
+			margin: 40px 0 15px 0;
+			font-family: 'Graphik', sans-serif;
+			font-weight: 700;
+			font-size: 1rem;
+			color: $accent-color;
+			line-height: (28/16);
+			letter-spacing: 0.075em;
+			text-transform: uppercase;
+			@include grid-breakpoint(sm) {
+				margin: 0 0 15px 0;
+				font-size: 1.0625rem;
+				line-height: (27/17);
+			}
+		}
+		.item__text {
+			margin: 0;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 1rem;
+			color: $text-primary;
+			line-height: (24/16);
+			@include grid-breakpoint(sm) {
+				margin: 0 0 5px 0;
+				font-size: 1.0625rem;
+				line-height: (27/17);
+			}
+			strong {
+				font-weight: 700;	
+			}
+		}
+	}
+}
+
+.excursion-photos {
+	@include grid-row();
+	margin: 120px 0;
+	&__col {
+		@include grid-col(12 12 6);
+		padding: 0;
+		@include grid-breakpoint(sm) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	.excursion-photo {
+		width: 100%;
+		height: 260px;
+		height: 50vh;
+		margin: 30px 0;
+		&--small {
+			@include grid-breakpoint(sm) {
+				height: 330px;
+				&:nth-child(2) {
+					margin-top: 30px;
+				}
+			}
+		}
+		&--large {
+			@include grid-breakpoint(sm) {
+				height: 690px;
+			}
+		}
+	}
+}
+
+.excursions__text {
+	margin: 10px 0;
+	padding: 0 15px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	color: $text-primary;
+	line-height: (24/16);
+	@include grid-breakpoint(sm) {
+		padding: 0;
+		font-size: 1.0625rem;
+		line-height: (27/17);
+	}
+}
+
+.excursions__btn-group {
+	margin: 50px 0 100px 0;
+	padding: 0 15px;
+	@include grid-breakpoint(sm) {
+		margin: 70px 0 120px 0;
+		padding: 0;
+	}
+	.btn-group__link {
+		display: block;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		font-size: 0.875rem;
+		color: $text-primary;
+		line-height: (60/14);
+		text-decoration: underline;
+		@include grid-breakpoint(sm) {
+			display: inline;
+			margin-left: 80px;
+			line-height: 1.33;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+		@include grid-breakpoint(md) {
+			transition: color 0.3s;
+			&:hover {
+				color: $accent-color;
+			}
+		}
+	}
+}
+
+.excursions__contacts {
+	position: relative;
+	display: block;
+	margin: 30px 0;
+	padding: 0 0 0 25px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	color: #4c4c4c;
+	&.tel {
+		&:before {
+			content: '';
+			position: absolute;
+			top: 3px;
+			left: 0;
+			width: 12px;
+			height: 12px;
+			background-image: url('../img/icons/phone--blue.svg');
+			background-size: 12px 12px;
+		}
+	}
+	&.email {
+		&:before {
+			content: '';
+			position: absolute;
+			top: 3px;
+			left: 0;
+			width: 12px;
+			height: 12px;
+			background-image: url('../img/icons/email--blue.svg');
+			background-size: 12px 12px;
+		}
+	}
+	@include grid-breakpoint(sm) {
+		display: inline-block;
+		margin: 0 50px 0 0;
+		font-size: 0.875rem;
+	}
+}

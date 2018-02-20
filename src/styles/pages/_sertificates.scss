@@ -1,0 +1,49 @@
+.sertificate-title {
+	margin: 0 0 30px 0;
+	font-family: 'Graphik', sans-serif;
+	font-weight: 600;
+	font-size: 1.375rem;
+	color: $section-title--dark;
+	line-height: (38/22);
+	text-transform: uppercase;
+}
+
+.sertificate-subtitle {
+	@include grid-col(12 12 8);
+	margin: 0;
+	padding: 0;
+	font-family: 'open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1.0625rem;
+	color: $text-primary;
+	line-height: (28/18);
+}
+
+.sertificates-block {
+	@include grid-col(12 12 10 8);
+	position: relative;
+	margin: 55px 0 0 0;
+	padding: 0;
+	@include grid-breakpoint(sm) {
+		padding: 0 60px;
+	}
+	.sertificates-block__image {
+		width: 155px;
+		height: 220px;
+		margin: 0 0 30px 0;
+		@include grid-breakpoint(sm) {
+			margin: 0;
+		}
+	}
+	.sertificates-slider {
+		.image-wrapper {
+			width: 100%;
+			height: auto;
+			height: 50vh;
+			@include grid-breakpoint(sm) {
+				width: 155px;
+				height: 220px;
+			}
+		}
+	}
+}
